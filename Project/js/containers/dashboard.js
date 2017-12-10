@@ -1,13 +1,15 @@
 import Card from '../components/card'
+let MongoClient = require('mongodb').MongoClient
 
 
 export default class Dashboard {
   constructor () {
+ this.url = 'mongodb://localhost:27017/Marvel'
   }
 
   getData() {
     // This is where we'll grab data from the marvel api
-
+let heroes = db.collection('testCollection').find({})
    }
 
   getContent() {
@@ -26,7 +28,16 @@ export default class Dashboard {
     title.append('Marvel Dashboard')
 
     container.appendChild(title)
+        
 
+for(let i = 0; i < heroes.length; i++) {
+   	container.append(new Card({
+	  title: heroes[i].name,
+	  description: heroes[i].description,
+	  image: heroes[i].image
+	}))
+    }
+/*
     let ironmanCard = new Card({
       title: 'Iron Man',
       image: '/images/ironman2.png',
@@ -46,29 +57,29 @@ export default class Dashboard {
     container.append(spidermanCard.getContent())
 
 
-   let hulkCard = new Card({
+   let wolverineCard = new Card({
       title: 'Wolverine',
       image: '/images/wolverine.png',
       description: '',
       link: 'http://marvel.wikia.com/wiki/James_Howlett_(Earth-616)',
       linkText: 'More Info on Wolverine'
     })
-    container.append(hulkCard.getContent())
+    container.append(wolverineCard.getContent())
 
   let captainamericaCard = new Card({
-      title: 'Captain America',
+      title: 'Captain America',  
       image: '/images/captainamerica2.png',
       description: '',
       link: 'http://marvel.wikia.com/wiki/Steven_Rogers_(Earth-616)',
       linkText: 'More Info on Captain America'
     })
     container.append(captainamericaCard.getContent())
-
+*/
 
 
     return container
   }
 
   animate() {
-  }
-}
+  } 
+} 

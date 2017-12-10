@@ -1,5 +1,7 @@
 import Dashboard from './containers/dashboard.js'
 
+let MongoClient = require('mongodb').MongoClient
+
 export default class App {
   constructor() {
     document.body.style.background = 'url("/images/04-MARVEL-LOGO-01.jpg") no-repeat center center fixed'

@@ -97,16 +97,57 @@ class Marvel {
 
     })
   }
-   findDocuments() {
+  findDocuments() {  
      MongoClient.connect(this.url, (err, db) => {
-       if (err) throw err
-        db.collection.find({}).toArray((err, result) => {
-       if (err) throw err
-         console.log(result)
-               db.close()
-        })
-     })
-    }
+      if (err) throw err
+      let query = { names: "Wolverine"}
+      db.collection('testCollection').find(query).toArray((err, result) => {
+      if (err) throw err
+        console.log(result)
+          db.close()
+  })
+})    
+}
+
+
+
+  findDocuments() {  
+     MongoClient.connect(this.url, (err, db) => {
+      if (err) throw err
+      let query = { names: "captain america"}
+      db.collection('testCollection').find(query).toArray((err, result) => {
+      if (err) throw err
+          console.log(result)
+            db.close()
+  })
+})    
+}
+
+
+  findDocuments() {  
+     MongoClient.connect(this.url, (err, db) => {
+      if (err) throw err
+      let query = { names: "iron man"}
+      db.collection('testCollection').find(query).toArray((err, result) => {
+        if (err) throw err
+          console.log(result)
+            db.close()
+  })
+})    
+}
+
+
+  findDocuments() {  
+     MongoClient.connect(this.url, (err, db) => {
+      if (err) throw err
+      let query = { names: "spider-man"}
+      db.collection('testCollection').find(query).toArray((err, result) => {
+      if (err) throw err
+          console.log(result)
+              db.close()
+  })
+})    
+}
 }
 
 module.exports = Marvel

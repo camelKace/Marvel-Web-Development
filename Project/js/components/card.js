@@ -1,4 +1,8 @@
 export default class Card {
+
+
+
+
   constructor (options) {
     this.options = options
   } 
@@ -15,7 +19,7 @@ export default class Card {
     card.style.borderStyle = 'none'
     card.style.borderColor = 'gold'
     card.style.background  = 'rgba(0, 0, 0, 0.4)'
-    card.style.borderRadius = '25px'
+    card.style.borderRadius = '5px'
     
     // Create Card Header
     let cardHeader = document.createElement('div')
