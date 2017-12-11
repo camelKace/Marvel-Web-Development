@@ -18,10 +18,20 @@ class Marvel {
             heroes['data'].forEach((hero,index) => {
              object = {
                name: hero.name, 
-               description :  hero.description
+               description :  hero.description,
+               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
              }
+
+          hero.urls.forEach((urlItem) => { 
+          if(urlItem.type === 'detail') {
+            object.link = urlItem.url
+              }
+           })
+
+
              array.push(object)
             })
+            console.log(array)
             callback(array)
 
           })
@@ -33,10 +43,17 @@ class Marvel {
             heroes['data'].forEach((hero,index) => {
              object = {
                name: hero.name, 
-               description :  hero.description
+               description: hero.description,
+               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
              }
+          hero.urls.forEach((urlItem) => { 
+          if(urlItem.type === 'detail') {
+             object.link = urlItem.url
+              }
+           })
              array.push(object)
             })
+            console.log(array)
             callback(array)
 
           })
@@ -48,10 +65,18 @@ class Marvel {
             heroes['data'].forEach((hero,index) => {
              object = {
                name: hero.name, 
-               description :  hero.description
+               description: hero.description,
+               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
              }
+          hero.urls.forEach((urlItem) => { 
+          if(urlItem.type === 'detail') {
+             object.link = urlItem.url
+              }
+           })
+
              array.push(object)
             })
+            console.log(array)
             callback(array)
 
           })
@@ -63,10 +88,18 @@ class Marvel {
             heroes['data'].forEach((hero,index) => {
              object = {
                name: hero.name, 
-               description :  hero.description
+               description: hero.description,
+               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
              }
+         hero.urls.forEach((urlItem) => { 
+          if(urlItem.type === 'detail') {
+             object.link = urlItem.url
+              }
+           })
+
              array.push(object)
             })
+            console.log(array)
             callback(array)
 
           })
@@ -97,57 +130,6 @@ class Marvel {
 
     })
   }
-  findDocuments() {  
-     MongoClient.connect(this.url, (err, db) => {
-      if (err) throw err
-      let query = { names: "Wolverine"}
-      db.collection('testCollection').find(query).toArray((err, result) => {
-      if (err) throw err
-        console.log(result)
-          db.close()
-  })
-})    
-}
-
-
-
-  findDocuments() {  
-     MongoClient.connect(this.url, (err, db) => {
-      if (err) throw err
-      let query = { names: "captain america"}
-      db.collection('testCollection').find(query).toArray((err, result) => {
-      if (err) throw err
-          console.log(result)
-            db.close()
-  })
-})    
-}
-
-
-  findDocuments() {  
-     MongoClient.connect(this.url, (err, db) => {
-      if (err) throw err
-      let query = { names: "iron man"}
-      db.collection('testCollection').find(query).toArray((err, result) => {
-        if (err) throw err
-          console.log(result)
-            db.close()
-  })
-})    
-}
-
-
-  findDocuments() {  
-     MongoClient.connect(this.url, (err, db) => {
-      if (err) throw err
-      let query = { names: "spider-man"}
-      db.collection('testCollection').find(query).toArray((err, result) => {
-      if (err) throw err
-          console.log(result)
-              db.close()
-  })
-})    
-}
-}
+}    
 
 module.exports = Marvel

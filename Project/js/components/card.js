@@ -1,8 +1,4 @@
 export default class Card {
-
-
-
-
   constructor (options) {
     this.options = options
   } 
@@ -27,7 +23,7 @@ export default class Card {
 
     // Create Card Title
     let cardTitle = document.createElement('div')
-    cardTitle.append(this.options.title)
+    cardTitle.append(this.options.name)
 
     cardTitle.style.color = '#dddddd'
     cardTitle.style.margin = 'auto'
@@ -46,11 +42,12 @@ export default class Card {
     cardBody.style.margin = 'auto'
 
     let cardImageContainer = document.createElement('div')
-    cardImageContainer.style.flex = '.25'
+    cardImageContainer.style.flex = '.5'
 
 
     let cardImage = document.createElement('img')
     cardImage.src = this.options.image
+    cardImage.style.width = '200px'
     cardImageContainer.append(cardImage)
     cardBody.append(cardImageContainer)
 
@@ -73,7 +70,7 @@ export default class Card {
 
     let cardFooterLink = document.createElement('a')
     cardFooterLink.href = this.options.link
-    cardFooterLink.append(this.options.linkText)
+    cardFooterLink.append('Click for More Info')
     cardFooterLink.style.color = '#dddddd'
     cardFooterLink.style.margin = 'auto'
     cardFooterLink.style.fontSize = '18px'

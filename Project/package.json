@@ -14,8 +14,9 @@
   "dependencies": {
     "express": "^4.15.3",
     "lodash": "^4.17.4",
-    "marvel-api": "^1.1.0",
-    "moment": "^2.19.1"
+    "moment": "^2.19.1",
+    "nodemon": "^1.12.5",
+    "mongodb": "2.2.30"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -25,8 +26,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1",
-    "mongodb": "2.2.30"
+    "webpack-dev-server": "^2.5.1"
   },
   "engines": {
     "node": "8.9.1",

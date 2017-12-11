@@ -1,6 +1,5 @@
 import Dashboard from './containers/dashboard.js'
 
-let MongoClient = require('mongodb').MongoClient
 
 export default class App {
   constructor() {
@@ -15,9 +14,10 @@ export default class App {
 
     let dashboard = new Dashboard()
 
-    content.append(dashboard.getContent())
+    dashboard.getData().then((data) => { 
+    content.append(dashboard.getContent(data))
     dashboard.animate()
-
+   })
   }
 }
 

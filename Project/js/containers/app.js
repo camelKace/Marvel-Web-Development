@@ -2,6 +2,6 @@ let Marvel = require('./marvel')
 
 let marvel = new Marvel()
 
-marvel.getData((arr) => {
-  marvel.insertDocuments(arr)
+marvel.getData((array) => {
+  marvel.insertDocuments(array)
 })
