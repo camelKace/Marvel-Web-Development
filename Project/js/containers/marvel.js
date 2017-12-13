@@ -19,7 +19,7 @@ class Marvel {
              object = {
                name: hero.name, 
                description :  hero.description,
-               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
+               image: `${hero.thumbnail.path}.${hero.thumbnail.extension}`
              }
 
           hero.urls.forEach((urlItem) => { 
@@ -44,7 +44,7 @@ class Marvel {
              object = {
                name: hero.name, 
                description: hero.description,
-               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
+               image: `${hero.thumbnail.path}.${hero.thumbnail.extension}`
              }
           hero.urls.forEach((urlItem) => { 
           if(urlItem.type === 'detail') {
@@ -66,7 +66,7 @@ class Marvel {
              object = {
                name: hero.name, 
                description: hero.description,
-               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
+               image: `${hero.thumbnail.path}.${hero.thumbnail.extension}`
              }
           hero.urls.forEach((urlItem) => { 
           if(urlItem.type === 'detail') {
@@ -89,7 +89,7 @@ class Marvel {
              object = {
                name: hero.name, 
                description: hero.description,
-               image: '${hero.thumbnail.path}.${hero.thumbnail.extension}'
+               image: `${hero.thumbnail.path}.${hero.thumbnail.extension}`
              }
          hero.urls.forEach((urlItem) => { 
           if(urlItem.type === 'detail') {

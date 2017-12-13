@@ -14,9 +14,10 @@
   "dependencies": {
     "express": "^4.15.3",
     "lodash": "^4.17.4",
+    "marvel-api": "^1.1.0",
     "moment": "^2.19.1",
-    "nodemon": "^1.12.5",
-    "mongodb": "2.2.30"
+    "mongodb": "2.2.30",
+    "nodemon": "^1.12.5"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
